@@ -26,7 +26,8 @@ const prompt = async <Q, T>(
 
   // Lazily support TS hook files
   if (isTypeScriptHook) {
-    require('ts-node/register/transpile-only')
+    //require('ts-node/register/transpile-only')
+    require('tsconfig-paths/register/transpile-only')
   }
   // shortcircuit without prompter
   let hooksModule = await import(hooksfile)

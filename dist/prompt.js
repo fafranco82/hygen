@@ -51,7 +51,8 @@ const prompt = (createPrompter, actionfolder, args) => __awaiter(void 0, void 0,
     const isTypeScriptHook = /\.ts$/.test(hooksfile);
     // Lazily support TS hook files
     if (isTypeScriptHook) {
-        require('ts-node/register/transpile-only');
+        //require('ts-node/register/transpile-only')
+        require('tsconfig-paths/register/transpile-only');
     }
     // shortcircuit without prompter
     let hooksModule = yield Promise.resolve().then(() => __importStar(require(hooksfile)));
